@@ -1,7 +1,7 @@
 # 🚀 REST API - User Management
 
-[![Java](https://img.shields.io/badge/-Java-007396?style=flat&logo=java&logoColor=white)](https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html)
-[![Spring Boot](https://img.shields.io/badge/Spring%20Boot-4.0.2%2B-blue?logo=Spring&logoColor=green)](https://spring.io/projects/spring-boot)
+[![Java](https://img.shields.io/badge/Java-17+-blue?logo=OpenJdk)](https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html)
+[![Spring Boot](https://img.shields.io/badge/Spring%20Boot-4.x%2B-blue?logo=Spring&logoColor=green)](https://spring.io/projects/spring-boot)
 
 > 🧠 Простой REST API сервис для управления пользователями, написанный на Java с использованием Spring Boot. Проект демонстрирует чистую архитектуру, разделение на DTO (Data Transfer Objects), использование пагинации и работу с базой данных H2.
  
