@@ -1,4 +1,4 @@
-package org.example.resapijava.dto;
+package org.example.resapijava.dto.user;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;

@@ -1,9 +1,10 @@
 package org.example.resapijava.controller;
 
-import org.example.resapijava.dto.IsCreateDto;
-import org.example.resapijava.dto.UserCreateDto;
-import org.example.resapijava.dto.UserDto;
-import org.example.resapijava.dto.UserUpdateDto;
+import org.example.resapijava.dto.user.IsCreateDto;
+import org.example.resapijava.dto.user.UserCreateDto;
+import org.example.resapijava.dto.user.UserDto;
+import org.example.resapijava.dto.user.UserUpdateDto;
+import org.example.resapijava.endpoints.ApiEndpoints;
 import org.example.resapijava.service.serviceimpl.UserServiceImpl;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -13,7 +14,7 @@ import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/api/v1")
+@RequestMapping(ApiEndpoints.API_V1)
 @Validated
 public class UserController {
 
@@ -23,7 +24,7 @@ public class UserController {
         this.userService = userService;
     }
 
-    @GetMapping(path = "/{id}", name = "Get user by id endpoint")
+    @GetMapping(path = ApiEndpoints.USER_ID, name = "Get user by id endpoint")
     public ResponseEntity<UserDto> getUserById(
             @PathVariable(required = true) Long id
     ) {
@@ -32,14 +33,14 @@ public class UserController {
                 .orElseGet(() -> ResponseEntity.notFound().build());
     }
 
-    @GetMapping(path = "/users", name = "Get users by endpoint")
+    @GetMapping(path = ApiEndpoints.USERS, name = "Get users by endpoint")
     public ResponseEntity<Page<UserDto>> getAllUsers(Pageable pageable) {
         Page<UserDto> usersPage = userService.getAllUsers(pageable);
 
         return ResponseEntity.ok(usersPage);
     }
 
-    @PostMapping(path = "/create/user", name = "Create user")
+    @PostMapping(path = ApiEndpoints.USER_CREATE, name = "Create user")
     public ResponseEntity<IsCreateDto> createUser(
             @RequestBody UserCreateDto userCreateDto
     ) {
@@ -52,7 +53,7 @@ public class UserController {
         }
     }
 
-    @PutMapping(path = "/change/{id}", name = "Change user data")
+    @PutMapping(path = ApiEndpoints.USER_CHANGE, name = "Change user data")
     public ResponseEntity<UserDto> updateUser(
             @PathVariable Long id,
             @RequestBody UserUpdateDto userUpdateDto
