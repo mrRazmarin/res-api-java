@@ -1,9 +1,9 @@
 package org.example.resapijava.service;
 
-import org.example.resapijava.dto.IsCreateDto;
-import org.example.resapijava.dto.UserCreateDto;
-import org.example.resapijava.dto.UserDto;
-import org.example.resapijava.dto.UserUpdateDto;
+import org.example.resapijava.dto.user.IsCreateDto;
+import org.example.resapijava.dto.user.UserCreateDto;
+import org.example.resapijava.dto.user.UserDto;
+import org.example.resapijava.dto.user.UserUpdateDto;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 

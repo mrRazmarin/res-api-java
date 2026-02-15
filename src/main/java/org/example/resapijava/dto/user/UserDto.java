@@ -1,4 +1,4 @@
-package org.example.resapijava.dto;
+package org.example.resapijava.dto.user;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -9,8 +9,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class UserUpdateDto {
+public class UserDto {
     private String login;
     private String email;
-    private String password;
 }
