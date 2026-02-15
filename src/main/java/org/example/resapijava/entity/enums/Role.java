@@ -1,9 +1,9 @@
 package org.example.resapijava.entity.enums;
 
 public enum Role {
-    USER("user"),
-    ADMIN("admin"),
-    MODERATOR("moderator");
+    ROLE_USER("user"),
+    ROLE_ADMIN("admin"),
+    ROLE_MODERATOR("moderator");
 
     private String value;
 

@@ -23,21 +23,21 @@ public class DataInit implements CommandLineRunner {
     public void run(String... args) {
         log.info("Запуск инициализации данных...");
 
-        if (!roleRepository.existsByName(Role.USER.getValue())) {
+        if (!roleRepository.existsByName(Role.ROLE_USER.getValue())) {
             Roles userRole = new Roles();
-            userRole.setName(Role.USER.getValue());
+            userRole.setName(Role.ROLE_USER.getValue());
             roleRepository.save(userRole);
         }
 
-        if (!roleRepository.existsByName(Role.ADMIN.getValue())) {
+        if (!roleRepository.existsByName(Role.ROLE_ADMIN.getValue())) {
             Roles adminRole = new Roles();
-            adminRole.setName(Role.ADMIN.getValue());
+            adminRole.setName(Role.ROLE_ADMIN.getValue());
             roleRepository.save(adminRole);
         }
 
-        if (!roleRepository.existsByName(Role.MODERATOR.getValue())) {
+        if (!roleRepository.existsByName(Role.ROLE_MODERATOR.getValue())) {
             Roles moderatorRole = new Roles();
-            moderatorRole.setName(Role.MODERATOR.getValue());
+            moderatorRole.setName(Role.ROLE_MODERATOR.getValue());
             roleRepository.save(moderatorRole);
         }
 

@@ -62,7 +62,7 @@ public class UserServiceImpl implements UserService {
         }
 
         try {
-            Roles defaultRole = roleRepository.findByName(Role.USER.getValue())
+            Roles defaultRole = roleRepository.findByName(Role.ROLE_USER.getValue())
                     .orElseThrow(() -> new RuntimeException("Роль user не найдена! Выполните инициализацию БД."));
 
 
